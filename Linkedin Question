@@ -1,0 +1,73 @@
+Consider the LinkedIn solution that allows people to connect on a social media platform for employment purposes. Every user on LinkedIn can establish one or more connections with other users on the same platform. In addition to the connections, assume that LinkedIn also tracks and saves the employer company of each user.
+
+Write a function that allows a user to discover the closest company to him/her. The function targets a specific input user and prints the closest company to the user based on his/her connections other than his/her company. The closest is defined by having the highest number of connections from 1st and 2nd-degree connections. For instance, for Amer from Tamatem, 1st degree has STS(1) and 2nd degree STS(1) and Roya(1), so accordingly, STS is the answer with a total of 2 connections.
+
+Input
+
+N for the number of users,
+C for the number of connections between these users
+An array for the names of the users with names[0] as the name of the first user and so on.
+An array for the companies with companies[0] as the company of the first user and so on.
+An array of integers for the From values of the connections, assuming 0-based arrays
+An array of integers for the To values of the connections, assuming 0-based arrays
+A user name as a string
+
+Output
+
+Your function should print the closest company for the given user name
+In case of having two or more companies have the same level of closeness, print all of them in ascending order, one line each.
+In case the user is not connected with anyone, print the result "Not Connected".
+
+Note:
+
+The program will be automatically tested by calling your Closest(int N, int C, string names[], string companies[],int from[], int to[], string name) function. You are not allowed to change the signature of this function but you can expand your file and functions/classes as needed. Assume that unique names are used such as email addresses.
+
+Example 1:
+Input:
+
+N= 10
+C= 12
+
+From and To Arrays
+0 1
+0 4
+0 6
+0 9
+1 2
+2 4
+2 5
+3 7
+4 7
+4 8
+6 9
+7 8
+
+Names:
+
+Ahmad
+Omar
+Sara
+Ali
+Khaled
+Mohammad
+Amer
+Sultan
+Firas
+Rula
+
+Companies:
+Tamatem
+STS
+PSUT
+STS
+Roya
+PSUT
+Tamatem
+Roya
+PSUT
+STS
+
+Name: Amer
+
+answer:
+STS 
